@@ -21,7 +21,7 @@ export const HowItWorks = () => {
       title: "Request & Broadcast",
       subtitle: "Sourcing & Broadcasting",
       desc: "It starts with your daily workforce needs. Contact us with your requirements, and the job vacancy is instantly broadcasted live on our dedicated applicant mobile app.",
-      images: ["/step/step01.jpg", "/step/step01-2.jpg"],
+      images: "/step/step01.jpg",
     },
     {
       step: "STEP 02",
@@ -42,21 +42,21 @@ export const HowItWorks = () => {
       title: "Digital Contracting",
       subtitle: "Digital Onboarding",
       desc: "Once the candidate is selected and completed the interview, they will receive their job offers on the app. They can securely review and sign their employment contracts digitally.",
-      images: ["/step/step04-2.jpg", "/step/step04.png"],
+      images: "/step/step04.jfif",
     },
     {
       step: "STEP 05",
       title: "App-Based Attendance",
       subtitle: "On-Site Operations",
       desc: "During the event, workers use the mobile app to clock in and out. The app validates their presence on-site, ensuring strict, real-time attendance tracking for your operations.",
-      images: ["/step/step05.jpg", "/step/step05-2.jpg"],
+      images: "/step/step05.jpg",
     },
     {
       step: "STEP 06",
       title: "Payroll & Invoicing",
       subtitle: "Automated Settlement",
       desc: "Attendance data automatically calculates worker payroll, generating instant digital payslips. Simultaneously, the system sends an automated invoice and a complete performance report directly to you.",
-      images: "/step/step06.png",
+      images: "/step/step06.jpg",
     },
   ];
 
