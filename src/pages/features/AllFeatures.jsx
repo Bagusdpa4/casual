@@ -179,7 +179,7 @@ export const AllFeatures = () => {
                   {/* Details Section */}
                   <div className="w-full flex-1 space-y-4 text-left">
                     {/* Badge / Key Label */}
-                    <span className="text-primary inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-4 text-3xl font-semibold uppercase tracking-widest">
+                    <span className="text-primary inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-4 text-3xl font-semibold tracking-widest">
                       {React.cloneElement(currentData.icon, {
                         className: "text-4xl",
                       })}
