@@ -2,6 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaHome } from "react-icons/fa";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
+import { LiaUserCheckSolid, LiaNetworkWiredSolid } from "react-icons/lia";
+import { BsWindowPlus } from "react-icons/bs";
+import { TbDeviceDesktopAnalytics } from "react-icons/tb";
 import { HiChevronRight } from "react-icons/hi";
 import { HiMiniUserGroup } from "react-icons/hi2";
 import { useNavigate } from "react-router-dom";
@@ -11,26 +14,26 @@ export const Menu = () => {
 
   const menuItems = [
     {
-      title: "What is SellGo ?",
-      icon: <HiMiniUserGroup />,
+      title: "What is Casual Work ?",
+      icon: <LiaUserCheckSolid />,
       bgIcon: "bg-slate-200",
       path: "/what-is",
     },
     {
       title: "Features",
-      icon: <HiMiniUserGroup />,
+      icon: <BsWindowPlus />,
       bgIcon: "bg-slate-200",
       path: "/all-features",
     },
     {
-      title: "How SellGo Works",
-      icon: <HiMiniUserGroup />,
+      title: "How It Works",
+      icon: <LiaNetworkWiredSolid />,
       bgIcon: "bg-slate-200",
       path: "/how-it-works",
     },
     {
       title: "Request Demo",
-      icon: <HiMiniUserGroup />,
+      icon: <TbDeviceDesktopAnalytics />,
       bgIcon: "bg-slate-200",
       path: "/req-demo",
     },
@@ -65,16 +68,16 @@ export const Menu = () => {
         <div className="py-6 text-center lg:py-16 xl:py-2">
           <div className="mb-4 flex w-full justify-center lg:mb-10 xl:mb-6">
             <img
-              src="/Teks Sellgo.png"
-              alt="Teks Sellgo Logo"
+              src="/bg-casual.png"
+              alt="casual Logo"
               className="h-auto w-[60%] object-contain lg:w-[60%] xl:w-[40%]"
             />
           </div>
           <h1 className="text-primary py-2 text-xl font-bold tracking-tight lg:py-4 lg:text-6xl xl:py-2 xl:text-3xl">
-            A sales application for sales teams
+            Effortless Daily Worker Management
           </h1>
-          <p className="mt-4 text-sm px-4 xl:px-10 lg:px-20 font-normal text-black lg:mt-4 lg:text-[40px] xl:mt-0 xl:text-lg">
-            Monitor visits, sales, products, and team movement tracking in real
+          <p className="mt-4 px-4 text-sm font-normal text-black lg:mt-4 lg:px-20 lg:text-[40px] xl:mt-0 xl:px-10 xl:text-lg">
+            Monitor requests, attendance, payroll, and team operations in real
             time
           </p>
         </div>

@@ -28,17 +28,17 @@ export const Homepage = () => {
         className="relative z-10 flex flex-col items-center text-center"
       >
         {/* Logo Icon (Hexagon Abstract) */}
-        <div className="lg:h-150 lg:w-150 mb-8 flex h-32 w-32 items-center justify-center xl:h-80 xl:w-80">
+        <div className="lg:h-160 lg:w-160 flex h-32 w-32 items-center justify-center xl:h-80 xl:w-80">
           <img
-            src="/Sellgo.png"
-            alt="Sellgo Logo"
+            src="/bg-casual.png"
+            alt="casual Logo"
             className="h-full w-full object-contain"
           />
         </div>
 
         {/* Subtitle */}
-        <p className="text-primary mt-2 text-sm font-semibold uppercase tracking-[0.2em] lg:text-4xl xl:text-2xl">
-          SALES AND INVENTORY MANAGEMENT SYSTEM
+        <p className="text-primary max-w-240 text-sm font-semibold uppercase leading-tight tracking-[0.2em] lg:text-4xl xl:text-2xl">
+          Daily worker recruitment application in one system
         </p>
 
         {/* 3. Interaction Prompt */}

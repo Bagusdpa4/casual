@@ -3,19 +3,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { PhoneFrame } from "../../components/assets/phoneFrame/PhoneFrame";
 import { FeatureTabs } from "../../components/assets/features/FeatureTabs";
-import { FaArrowLeft, FaHome, FaCheckCircle } from "react-icons/fa";
-import {
-  MdMap,
-  MdTimeline,
-  MdMonetizationOn,
-  MdInsights,
-  MdStore,
-  MdHistory,
-} from "react-icons/md";
+import { FaArrowLeft, FaHome, FaBrain, FaFileSignature } from "react-icons/fa";
+import { GrAnnounce } from "react-icons/gr";
+import { MdInsertChart } from "react-icons/md";
+import { RiMoneyDollarCircleLine } from "react-icons/ri";
+import { CiMapPin } from "react-icons/ci";
 
 export const AllFeatures = () => {
   const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState("Tracking & Visit System");
+  const [activeTab, setActiveTab] = useState("Job Broadcasting");
 
   useEffect(() => {
     window.scrollTo({
@@ -27,93 +23,102 @@ export const AllFeatures = () => {
 
   const features = [
     {
-      id: "Tracking & Visit System",
-      icon: <MdMap />,
+      id: "Job Broadcasting",
+      icon: <GrAnnounce />,
       contents: [
         {
-          title: "Tracking & Visit Monitoring System",
-          subtitle: "Real-Time Movement Tracking and Visit Analytics",
+          key: "Instant Sourcing",
+          title: "Real-Time Job Broadcasting",
+          subtitle: "Reach thousands of verified workers in seconds.",
+          desc: "Publish daily worker vacancies instantly. Your requests are broadcasted directly to our mobile app, reaching a vast pool of verified, ready-to- work candidates in seconds.",
+          image: [
+            "/features/job01.jpg",
+            "/features/job02.jpg",
+          ],
+        },
+      ],
+    },
+    {
+      id: "AI Matching",
+      icon: <FaBrain />,
+      contents: [
+        {
+          key: "Smart Screening",
+          title: "AI-Powered Applicant Matching",
+          subtitle: "Automated selection with zero manual effort.",
+          desc: "Say goodbye to manual CV sorting. Our intelligent AI automatically screens incoming applications and selects the most qualified candidates based on your specific category requirements.",
           image: [
             "/features/tracking01.png",
             "/features/tracking02.jpg",
             "/features/tracking03.png",
           ],
-          list: [
-            // "Jadwal tahunan terorganisir",
-            // "Monitoring progress",
-            // "Import dari Excel",
-            // "Evaluasi mudah",
+        },
+      ],
+    },
+    {
+      id: "E-Contracts",
+      icon: <FaFileSignature />,
+      contents: [
+        {
+          key: "Digital E-Contracts",
+          title: "Paperless Onboarding",
+          subtitle: "Legal compliance, 100% paperless.",
+          desc: "Ensure legal compliance without the paperwork. Selected candidates review and sign their employment contracts digitally through their mobile app before arriving on-site.",
+          image: [
+            "/features/tracking01.png",
+            "/features/tracking02.jpg",
+            "/features/tracking03.png",
           ],
         },
       ],
     },
     {
-      id: "Revenue",
-      icon: <MdMonetizationOn />,
+      id: "Attendance",
+      icon: <CiMapPin />,
       contents: [
         {
-          title: "Real-time Sales Revenue",
-          subtitle: "Speed ​​of Decision Making and Cash Flow Transparency",
-          image: ["/features/transaksi01.png", "/features/transaksi02.png"],
-          list: [
-            //   "Update stok otomatis",
-            //   "Alert stok rendah",
-            //   "Riwayat pemakaian",
-            //   "Manajemen supplier",
+          key: "Smart Clock-In System",
+          title: "Fraud-Proof Attendance",
+          subtitle: "GPS + facial recognition verified clock-in.",
+          desc: "Guarantee attendance accuracy. Workers check in and out via the app using a secure QR code system, validated by GPS location tracking and facial recognition.",
+          image: [
+            "/features/tracking01.png",
+            "/features/tracking02.jpg",
+            "/features/tracking03.png",
           ],
         },
       ],
     },
     {
-      id: "Product Insights",
-      icon: <MdInsights />,
+      id: "Payroll",
+      icon: <RiMoneyDollarCircleLine />,
       contents: [
         {
-          title: "Product Insights",
-          subtitle:
-            "Optimizing Stock and Aligning Business Strategy with Market Trends",
-          image: ["/features/produk01.png", "/features/produk02.png"],
-          list: [
-            //   "Scan barcode",
-            //   "Rekonsiliasi data",
-            //   "Laporan selisih",
-            //   "Approval digital",
+          key: "Automated Payroll",
+          title: "Seamless Financials",
+          subtitle: "Accurate wages, instant digital payslips.",
+          desc: "Eliminate manual calculation errors. The system automatically calculates worker wages based on verified attendance hours and instantly distributes digital payslips to the workers.",
+          image: [
+            "/features/tracking01.png",
+            "/features/tracking02.jpg",
+            "/features/tracking03.png",
           ],
         },
       ],
     },
     {
-      id: "Store Profile",
-      icon: <MdStore />,
+      id: "Reporting",
+      icon: <MdInsertChart />,
       contents: [
         {
-          title: "Store Profile",
-          subtitle:
-            "Integrated Customer Database Linked Directly to Store Profiles",
-          image: ["/features/profile01.png", "/features/profile02.png"],
-          list: [
-            //   "Scan barcode",
-            //   "Rekonsiliasi data",
-            //   "Laporan selisih",
-            //   "Approval digital",
-          ],
-        },
-      ],
-    },
-    {
-      id: "Billing History",
-      icon: <MdHistory />,
-      contents: [
-        {
-          title: "Billing History",
-          subtitle:
-            "All transaction records, invoices, and payment statuses are systematically archived in a digital format",
-          image: ["/features/transaksi01.png", "/features/transaksi02.png"],
-          list: [
-            //   "Scan barcode",
-            //   "Rekonsiliasi data",
-            //   "Laporan selisih",
-            //   "Approval digital",
+          key: "Auto-Invoicing & Reporting",
+          title: "Comprehensive Administration",
+          subtitle: "Automated invoices & performance reports.",
+          desc: "At the end of every event or shift, the system automatically generates a digital invoice for the client, accompanied by a detailed performance report of the deployed workforce.",
+          image: [
+            "/features/tracking01.png",
+            "/features/tracking02.jpg",
+            "/features/tracking03.png",
           ],
         },
       ],
@@ -128,21 +133,21 @@ export const AllFeatures = () => {
       <div className="pointer-events-none absolute -left-20 -top-20 h-64 w-64 rounded-full bg-sky-200 blur-[120px]" />
       <div className="pointer-events-none absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-sky-200 blur-[120px]" />
 
-      <div className="flex w-full max-w-7xl flex-col items-center">
+      <div className="flex w-full max-w-7xl flex-col">
         {/* Header Section */}
         <div className="mt-6 flex w-full justify-center">
           <img
-            src="/Teks Sellgo.png"
-            alt="Teks Sellgo Logo"
+            src="/bg-casual.png"
+            alt="Casual Logo"
             className="h-auto w-[30%] object-contain lg:w-[40%] xl:w-[20%]"
           />
         </div>
-        <div className="px-10 py-6 text-center lg:py-20 xl:py-6">
+        <div className="px-12 py-6 text-left lg:py-10 xl:py-6">
           <h1 className="text-primary py-2 text-2xl font-black uppercase tracking-tight lg:text-7xl xl:text-4xl">
             Features
           </h1>
-          <p className="mt-4 text-sm font-semibold text-slate-500 lg:text-4xl xl:text-lg">
-            Lihat apa saja yang dapat anda kelola
+          <p className="mt-4 border-b border-slate-500 pb-10 text-sm font-semibold text-slate-500 lg:text-4xl xl:text-lg">
+            See what Casual Works can do
           </p>
         </div>
 
@@ -156,7 +161,7 @@ export const AllFeatures = () => {
         </div>
 
         {/* Content Section - Dinamis Kanan Kiri */}
-        <div className="flex w-full items-center justify-center bg-slate-100 p-10">
+        <div className="flex w-full items-center justify-center p-10">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
@@ -169,40 +174,61 @@ export const AllFeatures = () => {
               {currentData.contents.map((content, index) => (
                 <div
                   key={index}
-                  className={`flex w-full flex-col items-center gap-12 lg:gap-16 ${currentData.contents.length > 1 ? "lg:flex-row lg:justify-center" : "lg:flex-row lg:justify-center lg:gap-6"} ${index % 2 !== 0 && currentData.contents.length > 1 ? "lg:flex-row-reverse" : ""}`}
+                  className={`flex w-full flex-col items-center gap-12 lg:gap-16 ${
+                    currentData.contents.length > 1
+                      ? "lg:flex-row lg:justify-center"
+                      : "lg:flex-row lg:justify-center lg:gap-6"
+                  } ${index % 2 !== 0 && currentData.contents.length > 1 ? "lg:flex-row-reverse" : ""}`}
                 >
+                  {/* Details Section */}
+                  <div className="w-full flex-1 space-y-4 text-left">
+                    {/* Badge / Key Label */}
+                    <span className="text-primary inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-4 text-3xl font-semibold uppercase tracking-widest">
+                      {React.cloneElement(currentData.icon, {
+                        className: "text-4xl",
+                      })}
+                      {content.key}
+                    </span>
+
+                    {/* Title */}
+                    <h2 className="text-primary text-4xl font-black leading-tight lg:text-7xl xl:text-5xl">
+                      {content.title}
+                    </h2>
+
+                    {/* Subtitle */}
+                    <p className="text-xl font-bold leading-tight text-sky-500 lg:text-5xl xl:text-2xl">
+                      {content.subtitle}
+                    </p>
+
+                    {/* Divider */}
+                    <div className="h-1 w-40 rounded-full bg-black" />
+
+                    {/* Description */}
+                    <p className="text-sm font-semibold leading-relaxed text-slate-500 lg:text-4xl xl:text-base">
+                      {content.desc}
+                    </p>
+
+                    {/* Dots Indicator */}
+                    <div className="flex items-center gap-2 pt-2">
+                      {features.map((f) => (
+                        <button
+                          key={f.id}
+                          onClick={() => setActiveTab(f.id)}
+                          className={`h-6 rounded-full transition-all duration-300 ${
+                            activeTab === f.id
+                              ? "bg-primary w-20"
+                              : "w-10 cursor-pointer bg-slate-300"
+                          }`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+
                   {/* Phone Frame Section */}
                   <div className="flex w-full flex-1 justify-center">
                     <div className="max-w-62.5 lg:max-w-100 xl:max-w-65 w-full">
                       <PhoneFrame screenshot={content.image} />
                     </div>
-                  </div>
-
-                  {/* Details Section */}
-                  <div className="w-full flex-1 space-y-4 text-left">
-                    <h2 className="text-primary text-4xl font-black leading-tight lg:text-7xl xl:text-5xl">
-                      {content.title}
-                    </h2>
-                    <p className="text-xl font-bold leading-tight text-sky-400 lg:text-5xl xl:text-2xl">
-                      {content.subtitle}
-                    </p>
-
-                    {/* <div className="space-y-4 pt-4">
-                      {content.list.map((item, i) => (
-                        <motion.div
-                          initial={{ opacity: 0, x: 20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: i * 0.1 }}
-                          key={i}
-                          className="flex items-center gap-4 rounded-2xl border border-slate-300 bg-white p-4 shadow-sm lg:p-4 xl:p-4"
-                        >
-                          <FaCheckCircle className="text-primary text-lg lg:text-2xl xl:text-xl" />
-                          <span className="font-semibold text-black lg:text-3xl xl:text-lg">
-                            {item}
-                          </span>
-                        </motion.div>
-                      ))}
-                    </div> */}
                   </div>
                 </div>
               ))}

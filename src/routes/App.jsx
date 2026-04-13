@@ -4,13 +4,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // Pages
 import { Homepage } from "../pages/Homepage";
 import { Menu } from "../pages/templates/Menu";
-// import { MenuHowToWorks } from "../pages/templates/MenuHowToWorks";
-// import { Features } from "../pages/features/Features";
 import { WhatIs } from "../pages/features/WhatIs";
 import { HowItWorks } from "../pages/features/HowItWorks";
 import { AllFeatures } from "../pages/features/AllFeatures";
 import { RequestDemo } from "../pages/features/RequestDemo";
-// import { DashboardPreview } from "../pages/features/DashboardPreview";
 import { Error404 } from "../pages/errors/Error404";
 
 // Components
@@ -34,11 +31,6 @@ export const App = () => {
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/all-features" element={<AllFeatures />} />
           <Route path="/req-demo" element={<RequestDemo />} />
-
-          {/* Template */}
-          {/* <Route path="/menu-pov" element={<MenuHowToWorks />} />
-          <Route path="/features" element={<Features />} />
-          <Route path="/dashboard-preview" element={<DashboardPreview />} /> */}
 
           {/* Error */}
           <Route path="*" element={<Error404 />} />

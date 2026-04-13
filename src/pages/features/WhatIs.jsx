@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaArrowLeft, FaHome } from "react-icons/fa";
+import { FaArrowLeft, FaHome, FaRobot, FaUserFriends } from "react-icons/fa";
+import { AiOutlineGlobal } from "react-icons/ai";
+import { IoPhonePortrait, IoReceipt } from "react-icons/io5";
+import { CiMapPin } from "react-icons/ci";
 
 export const WhatIs = () => {
   const navigate = useNavigate();
@@ -10,32 +13,48 @@ export const WhatIs = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, []);
 
-  const problems = [
-    "Many sales teams appear active, but lack measurable impact.",
-    "Manual reporting is often delayed, inconsistent, and difficult to verify.",
-    "As a result, businesses struggle to distinguish between activity and actual performance.",
-  ];
-
-  const coreValues = [
+  const corePillar = [
     {
-      title: "Full Visibility",
+      title: "All-in-One Ecosystem",
       description:
-        "Monitor sales activities in real time across all locations.",
+        "Manage sourcing, attendance, and payroll within a single integrated platform.",
+      icon: <AiOutlineGlobal />,
+      bgIcon: "bg-slate-200",
     },
     {
-      title: "Accountability You Can Trust",
+      title: "AI-Powered Matching",
       description:
-        "Ensure every visit and transaction is verifiable and recorded.",
+        "Automatically selects the most matching candidates tailored perfectly to your specific manpower needs.",
+      icon: <FaRobot />,
+      bgIcon: "bg-slate-200",
     },
     {
-      title: "Data-Driven Decisions",
+      title: "100% Paperless Operation",
       description:
-        "Make faster, more accurate decisions based on real field data.",
+        "Eliminate physical paperwork with digital employment contracts and e-pay slips.",
+      icon: <IoPhonePortrait />,
+      bgIcon: "bg-slate-200",
     },
     {
-      title: "Performance Clarity",
+      title: "Real-Time Visibility",
       description:
-        "Identify top performers and areas that require improvement.",
+        "Monitor worker attendance and on-site status live via GPS and facial recognition.",
+      icon: <CiMapPin />,
+      bgIcon: "bg-slate-200",
+    },
+    {
+      title: "Verified Talent Pool",
+      description:
+        "Gain instant access to a curated database of pre-screened, ready-to-work candidates.",
+      icon: <FaUserFriends />,
+      bgIcon: "bg-slate-200",
+    },
+    {
+      title: "Automated Accuracy",
+      description:
+        "Ensure zero calculation errors with automated payroll and transparent digital invoicing.",
+      icon: <IoReceipt />,
+      bgIcon: "bg-slate-200",
     },
   ];
 
@@ -45,78 +64,67 @@ export const WhatIs = () => {
       <div className="pointer-events-none absolute -left-20 -top-20 h-80 w-80 rounded-full bg-sky-200 blur-[120px]" />
       <div className="pointer-events-none absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-sky-200 blur-[120px]" />
 
-      {/* Header Logo - Center */}
-      <div className="mb-12 flex w-full justify-center lg:mb-20 xl:mb-20">
+      {/* Logo */}
+      <div className="mb-12 flex w-full justify-center lg:mb-16 xl:mb-20">
         <img
-          src="/Teks Sellgo.png"
-          alt="SellGo Logo"
+          src="/bg-casual.png"
+          alt="Casual Logo"
           className="h-auto w-[40%] lg:w-[50%] xl:w-[20%]"
         />
       </div>
 
-      {/* Main Container */}
-      <div className="mx-auto w-full max-w-4xl grow">
+      {/* Main Content */}
+      <div className="mx-auto w-full max-w-5xl grow">
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex flex-col space-y-16"
+          className="flex flex-col space-y-10"
         >
-          {/* Section: What is SellGo? (Rata Kiri) */}
-          <section className="space-y-4 text-left">
+          {/* Headline */}
+          <section className="space-y-6 border-b border-slate-500 pb-6 text-center lg:text-left">
             <h1 className="text-primary text-3xl font-black lg:text-7xl xl:text-4xl">
-              What is SellGo?
+              Your End-to-End Daily Workforce{" "}
+              <span className="text-sky-400">Solution.</span>
             </h1>
-            <p className="max-w-4xl text-base font-medium leading-relaxed text-black lg:text-4xl xl:text-lg">
-              SellGo is not just a sales tracking application. It is a system
-              designed to transform your field sales operations into structured,
-              measurable, and high-performing business activities.
+            <p className="mx-auto max-w-4xl text-base font-semibold leading-relaxed text-slate-500 lg:mx-0 lg:text-4xl xl:text-lg">
+              A smart, cloud-based platform designed to{" "}
+              <span className="text-primary font-extrabold">
+                bridge the gap
+              </span>{" "}
+              between your daily worker requests and fast, transparent
+              fulfillment.
             </p>
           </section>
 
-          {/* Section: The Challenge (Agak ke Kanan / Center-Left) */}
-          <section className="flex flex-col items-center space-y-4 self-center lg:pl-40">
-            <div className="w-full">
-              <h2 className="text-primary text-3xl font-black lg:text-7xl xl:text-4xl">
-                The Challenge
-              </h2>
-              <ul className="mt-4 space-y-4">
-                {problems.map((problem, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-black lg:h-4 lg:w-4 xl:h-4 xl:w-4" />
-                    <span className="text-base font-medium text-black lg:text-4xl xl:text-lg">
-                      {problem}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </section>
+          {/* Section Label */}
+          <span className="text-4xl font-medium uppercase text-slate-500">
+            The Core Pillar
+          </span>
 
-          {/* Section: Core Value (Rata Kiri Lagi) */}
-          <section className="space-y-6 text-left">
-            <h2 className="text-primary text-3xl font-black lg:text-7xl xl:text-4xl">
-              Core Value
-            </h2>
-            <div className="space-y-6">
-              {coreValues.map((value, index) => (
-                <div key={index} className="group">
-                  <h3 className="pb-0 text-base font-bold text-black lg:pb-4 lg:text-5xl xl:pb-0 xl:text-lg">
-                    {value.title}
-                  </h3>
-                  <p className="text-base font-normal text-black lg:text-4xl xl:text-lg">
-                    {value.description}
+          {/* Core Pillar Cards */}
+          <section className="space-y-10">
+            {corePillar.map((item, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-6 rounded-2xl border border-slate-300 bg-white p-4 shadow-xl"
+              >
+                <div
+                  className={`flex h-10 w-10 shrink-0 items-center justify-center self-center rounded-full lg:h-28 lg:w-28 xl:h-12 xl:w-12 ${item.bgIcon}`}
+                >
+                  {React.cloneElement(item.icon, {
+                    className: "text-lg lg:text-6xl xl:text-2xl text-black",
+                  })}
+                </div>
+                <div className="flex flex-col gap-1">
+                  <p className="text-primary text-sm font-bold lg:text-5xl xl:text-2xl">
+                    {item.title}
+                  </p>
+                  <p className="text-sm leading-snug text-slate-500 lg:text-4xl xl:text-lg">
+                    {item.description}
                   </p>
                 </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Section: Conclusion (Jorok ke Kanan) */}
-          <section className="self-end pt-10 text-right lg:max-w-4xl">
-            <p className="text-primary text-3xl font-bold lg:text-5xl xl:text-4xl">
-              With SellGo, your sales operations become more transparent, more
-              controlled, and better equipped to scale with confidence.
-            </p>
+              </div>
+            ))}
           </section>
         </motion.div>
       </div>
@@ -130,7 +138,6 @@ export const WhatIs = () => {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="flex items-center gap-6 p-3 lg:gap-8 lg:p-6 xl:gap-4 xl:p-4"
         >
-          {/* Tombol Kembali */}
           <button
             onClick={() => navigate(-1)}
             className="group flex cursor-pointer items-center gap-4 rounded-full border border-slate-100 bg-white px-6 py-2 shadow-lg transition-all hover:scale-110 hover:bg-slate-50 lg:px-12 lg:py-8 xl:px-4 xl:py-4"
@@ -141,10 +148,8 @@ export const WhatIs = () => {
             </span>
           </button>
 
-          {/* Divider vertikal tipis agar mirip desain referensi */}
           <div className="h-8 w-1 bg-slate-200 lg:h-16" />
 
-          {/* Tombol Home */}
           <button
             onClick={() => navigate("/")}
             className="bg-primary/10 text-primary hover:bg-primary flex h-12 w-12 cursor-pointer items-center justify-center rounded-full transition-all duration-300 hover:scale-110 hover:text-white lg:h-24 lg:w-24 xl:h-14 xl:w-14"

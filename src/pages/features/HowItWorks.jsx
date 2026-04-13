@@ -18,44 +18,44 @@ export const HowItWorks = () => {
   const steps = [
     {
       step: "STEP 01",
-      title: "Absence",
-      subtitle: "Absence Smart Attendance & Geo-Validation",
-      desc: "Selfie-based attendance and geotagging features provide management with full transparency regarding the precise time and location your sales team starts their day.",
+      title: "Request & Broadcast",
+      subtitle: "Sourcing & Broadcasting",
+      desc: "It starts with your daily workforce needs. Contact us with your requirements, and the job vacancy is instantly broadcasted live on our dedicated applicant mobile app.",
       images: ["/step/step01.jpg", "/step/step01-2.jpg"],
     },
     {
       step: "STEP 02",
-      title: "Stock Entry",
-      subtitle: "Warehouse Stock Withdrawal Quantity",
-      desc: "Say goodbye to inventory discrepancies. SellGo automates the recording of stock taken directly from the warehouse, ensuring every product movement is accurately tracked.",
+      title: "Apply & Review",
+      subtitle: "Applicant Review",
+      desc: "Job seekers register and apply directly through the app. You gain immediate access to a dashboard where you can view the complete, detailed profiles of every registered candidate.",
       images: "/step/step02.jpg",
     },
     {
       step: "STEP 03",
-      title: "Schedule Visits",
-      subtitle: "Optimized Route Mapping",
-      desc: "Maximize trip efficiency and productivity. SellGo enables strategic, real-time daily store routing, eliminating overlapping paths and wasted travel time.",
+      title: "AI-Powered Matching",
+      subtitle: "Smart Selection",
+      desc: "No more manual sorting. Our built-in AI automatically screens all applicants and selects the most qualified candidates that perfectly match your specific job categories.",
       images: "/step/step03.png",
     },
     {
       step: "STEP 04",
-      title: "Visitation",
-      subtitle: "",
-      desc: "Visits are executed based on clear schedules and priorities, increasing conversion rates by keeping the team focused on the right targets.",
+      title: "Digital Contracting",
+      subtitle: "Digital Onboarding",
+      desc: "Once the candidate is selected and completed the interview, they will receive their job offers on the app. They can securely review and sign their employment contracts digitally.",
       images: ["/step/step04-2.jpg", "/step/step04.png"],
     },
     {
       step: "STEP 05",
-      title: "Transaction",
-      subtitle: "Live Transactions & Reporting",
-      desc: "Every transaction is recorded in real-time, streamlining workflows and providing comprehensive sales performance data.",
+      title: "App-Based Attendance",
+      subtitle: "On-Site Operations",
+      desc: "During the event, workers use the mobile app to clock in and out. The app validates their presence on-site, ensuring strict, real-time attendance tracking for your operations.",
       images: ["/step/step05.jpg", "/step/step05-2.jpg"],
     },
     {
       step: "STEP 06",
-      title: "Reconciliation & Reporting",
-      subtitle: "Final Verification & Sales Insights",
-      desc: "Digitized reconciliation of cash and inventory ensures seamless validation between field sales and the warehouse. Access real-time sales analytics to monitor team productivity and shape your long-term business roadmap.",
+      title: "Payroll & Invoicing",
+      subtitle: "Automated Settlement",
+      desc: "Attendance data automatically calculates worker payroll, generating instant digital payslips. Simultaneously, the system sends an automated invoice and a complete performance report directly to you.",
       images: "/step/step06.png",
     },
   ];
@@ -69,23 +69,23 @@ export const HowItWorks = () => {
       {/* Header Halaman */}
       <div className="mb-4 flex w-full justify-center lg:mb-20 xl:mb-10">
         <img
-          src="/Teks Sellgo.png"
-          alt="Teks Sellgo Logo"
+          src="/bg-casual.png"
+          alt="Casual Logo"
           className="h-auto w-[40%] object-contain lg:w-[50%] xl:w-[15%]"
         />
       </div>
-      <div className="mb-10 text-center lg:mb-20 xl:mb-16">
+      <div className="mb-10 text-center xl:text-center lg:text-left lg:mb-20 xl:mb-16">
         <h1 className="text-primary text-2xl font-black tracking-tight lg:text-6xl xl:text-3xl">
-          HOW THIS APP WORK
+          How Casual Work Operates
         </h1>
         <p className="mt-4 text-sm font-medium text-black lg:mt-8 lg:text-4xl xl:mt-2 xl:text-lg">
-          Revolutionize your sales workflow through efficiency and transparency
-          in every step
+          From your initial request to final invoicing, discover how our
+          end-to-end ecosystem fully automates your daily worker management.
         </p>
       </div>
 
       {/* Container Step */}
-      <div className="mx-auto flex max-w-5xl flex-col gap-20 lg:gap-40 xl:gap-0">
+      <div className="mx-auto flex max-w-5xl flex-col gap-20 lg:gap-20 xl:gap-0">
         {steps.map((item, index) => (
           <motion.div
             key={index}
@@ -93,20 +93,20 @@ export const HowItWorks = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
-            className={`flex flex-col items-center gap-10 lg:flex-row ${
+            className={`flex flex-col items-center gap-10 border-b border-slate-500 pb-20 lg:flex-row ${
               index % 2 !== 0 ? "lg:flex-row-reverse" : ""
             }`}
           >
             {/* Bagian Teks */}
             <div className="flex-1 space-y-4 text-left">
-              <span className="text-primary inline-block rounded-full bg-blue-200 px-6 py-2 text-sm font-bold lg:text-4xl xl:text-lg">
+              <span className="bg-primary inline-block rounded-full px-6 py-2 text-sm font-bold text-white lg:text-4xl xl:text-lg">
                 {item.step}
               </span>
               <div className="space-y-1">
                 <h2 className="text-primary text-3xl font-black leading-tight lg:text-7xl xl:text-5xl">
                   {item.title}
                 </h2>
-                <p className="text-lg font-extrabold leading-tight text-sky-400 lg:text-5xl xl:text-2xl">
+                <p className="text-lg font-extrabold leading-tight text-slate-500 lg:text-5xl xl:text-2xl">
                   {item.subtitle}
                 </p>
               </div>

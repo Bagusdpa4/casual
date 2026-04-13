@@ -19,7 +19,7 @@ export const FeatureTabs = ({ items, activeTab, onTabChange }) => {
         grabCursor={true}
         slidesOffsetBefore={16}
         slidesOffsetAfter={16}
-        className="py-8! w-full max-w-6xl"
+        className="py-4! w-full max-w-6xl"
       >
         {items.map((tab) => (
           <SwiperSlide

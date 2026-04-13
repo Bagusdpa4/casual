@@ -20,22 +20,25 @@ export const RequestDemo = () => {
         transition={{ delay: 0.3, duration: 0.8 }}
         className="relative z-10 flex flex-col items-center text-center"
       >
-        <div className="lg:mb-30 mb-12 flex w-full justify-center xl:mb-16">
+        <div className="lg:mb-20 mb-12 flex w-full justify-center xl:mb-16">
           <img
-            src="/Teks Sellgo.png"
-            alt="SellGo Logo"
-            className="h-auto w-[40%] lg:w-[60%] xl:w-[20%]"
+            src="/bg-casual.png"
+            alt="Casual Logo"
+            className="h-auto w-[40%] lg:w-[50%] xl:w-[20%]"
           />
         </div>
 
         {/* Main Container */}
         <div className="mb-10 text-center lg:mb-20 xl:mb-16">
-          <h1 className="text-primary text-2xl font-black uppercase tracking-tight lg:text-7xl xl:text-3xl">
-            Request Demo
+          <h1 className="text-primary text-2xl font-black uppercase tracking-tight lg:text-6xl xl:text-3xl">
+            Ready to Modernize Your Operations
           </h1>
           <p className="mt-4 text-sm font-semibold text-black lg:mt-8 lg:text-4xl xl:mt-2 xl:text-lg">
-            Ready to transform your operations? Book a demo with our experts to
-            see how our product can drive growth for your business
+            Don't let manual management slow your business down.{" "}
+            <span className="text-primary font-extrabold">
+              Scan the code below
+            </span>{" "}
+            to see firsthand how Casual Work streamlines everything.
           </p>
         </div>
 
