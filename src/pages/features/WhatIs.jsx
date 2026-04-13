@@ -102,14 +102,21 @@ export const WhatIs = () => {
           </span>
 
           {/* Core Pillar Cards */}
-          <section className="space-y-10">
+          <section className="space-y-4">
             {corePillar.map((item, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="flex items-center gap-6 rounded-2xl border border-slate-300 bg-white p-4 shadow-xl"
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                  delay: index * 0.1,
+                  duration: 0.4,
+                  ease: "easeOut",
+                }}
+                className="flex items-center gap-4 rounded-2xl border border-slate-100 bg-white p-4 shadow-lg"
               >
                 <div
-                  className={`flex h-10 w-10 shrink-0 items-center justify-center self-center rounded-full lg:h-28 lg:w-28 xl:h-12 xl:w-12 ${item.bgIcon}`}
+                  className={`flex h-10 w-10 shrink-0 items-center justify-center self-center rounded-xl lg:h-20 lg:w-20 xl:h-12 xl:w-12 ${item.bgIcon}`}
                 >
                   {React.cloneElement(item.icon, {
                     className: "text-lg lg:text-6xl xl:text-2xl text-black",
@@ -123,7 +130,7 @@ export const WhatIs = () => {
                     {item.description}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </section>
         </motion.div>
