@@ -67,6 +67,20 @@ export const Homepage = () => {
             ))}
           </div>
         </div>
+
+        {/* Logo Store */}
+        <div className="mt-8 flex items-center gap-3 lg:mt-40 lg:gap-10 xl:mt-10 xl:gap-4">
+          <img
+            src="/Google Play.png"
+            alt="Google Play Logo"
+            className="h-8 w-auto object-contain lg:h-20 xl:h-10"
+          />
+          <img
+            src="/App Store.png"
+            alt="App Store Logo"
+            className="h-8 w-auto object-contain lg:h-20 xl:h-10"
+          />
+        </div>
       </motion.div>
 
       {/* 4. Footer Branding */}
