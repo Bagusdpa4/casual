@@ -5,8 +5,6 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
 import { LiaUserCheckSolid, LiaNetworkWiredSolid } from "react-icons/lia";
 import { BsWindowPlus } from "react-icons/bs";
 import { TbDeviceDesktopAnalytics } from "react-icons/tb";
-import { HiChevronRight } from "react-icons/hi";
-import { HiMiniUserGroup } from "react-icons/hi2";
 import { useNavigate } from "react-router-dom";
 
 export const Menu = () => {
@@ -90,14 +88,14 @@ export const Menu = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => navigate(item.path)}
-              className="group flex w-full cursor-pointer items-center justify-between rounded-[1.5rem] border border-slate-300 bg-white p-4 shadow-xl transition-all hover:shadow-md lg:rounded-[3rem] lg:p-8 xl:rounded-[2rem] xl:p-5"
+              className="group flex w-full cursor-pointer items-center justify-between rounded-[1.5rem] border border-slate-400 bg-white p-4 shadow-xl transition-all hover:shadow-md lg:rounded-full lg:p-8 xl:rounded-[2rem] xl:p-5"
             >
               <div className="flex items-center gap-4 lg:gap-8 xl:gap-6">
                 <div
-                  className={`flex h-10 w-10 items-center justify-center rounded-xl lg:h-20 lg:w-20 xl:h-12 xl:w-12 ${item.bgIcon}`}
+                  className={`flex h-10 w-10 items-center justify-center rounded-full lg:h-24 lg:w-24 xl:h-12 xl:w-12 ${item.bgIcon}`}
                 >
                   {React.cloneElement(item.icon, {
-                    className: "text-lg xl:text-2xl text-primary lg:text-5xl",
+                    className: "text-lg xl:text-2xl text-primary lg:text-6xl",
                   })}
                 </div>
                 <div className="text-left">
@@ -106,7 +104,7 @@ export const Menu = () => {
                   </h3>
                 </div>
               </div>
-              <HiChevronRight className="hidden text-slate-400 lg:block lg:text-6xl xl:block xl:text-2xl" />
+              <FaArrowRight className="text-primary hidden lg:block lg:text-4xl xl:block xl:text-2xl" />
             </motion.button>
           ))}
         </div>
@@ -154,23 +152,23 @@ export const Menu = () => {
           {/* Tombol Kembali */}
           <button
             onClick={() => navigate(-1)}
-            className="group flex cursor-pointer items-center gap-4 rounded-full border border-slate-100 bg-white px-6 py-2 shadow-lg transition-all hover:scale-110 hover:bg-slate-50 lg:px-12 lg:py-8 xl:px-4 xl:py-4"
+            className="group flex cursor-pointer items-center gap-4 rounded-full border border-primary bg-white px-6 py-2 shadow-lg transition-all hover:scale-110 hover:bg-primary lg:px-12 lg:py-8 xl:px-4 xl:py-4"
           >
-            <FaArrowLeft className="group-hover:text-primary text-lg text-slate-500 lg:text-4xl xl:text-xl" />
-            <span className="group-hover:text-primary text-sm font-bold uppercase text-slate-500 lg:text-2xl xl:text-base">
-              Kembali
+            <FaArrowLeft className="text-primary text-base group-hover:text-white lg:text-4xl xl:text-lg" />
+            <span className="text-primary text-sm font-bold uppercase group-hover:text-white lg:text-3xl xl:text-base">
+              Back
             </span>
           </button>
 
           {/* Divider vertikal tipis agar mirip desain referensi */}
-          <div className="h-8 w-1 bg-slate-200 lg:h-16" />
+          <div className="h-8 w-1 bg-primary lg:h-16" />
 
           {/* Tombol Home */}
           <button
             onClick={() => navigate("/")}
-            className="bg-primary/10 text-primary hover:bg-primary flex h-12 w-12 cursor-pointer items-center justify-center rounded-full transition-all duration-300 hover:scale-110 hover:text-white lg:h-24 lg:w-24 xl:h-14 xl:w-14"
+            className="bg-primary/10 text-primary hover:bg-primary flex h-10 w-10 cursor-pointer items-center justify-center rounded-full transition-all duration-300 hover:scale-110 hover:text-white lg:h-24 lg:w-24 xl:h-12 xl:w-12"
           >
-            <FaHome className="text-xl lg:text-5xl xl:text-2xl" />
+            <FaHome className="text-lg lg:text-5xl xl:text-xl" />
           </button>
         </motion.div>
       </div>

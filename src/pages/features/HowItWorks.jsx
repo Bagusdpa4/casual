@@ -30,29 +30,29 @@ export const HowItWorks = () => {
       desc: "Job seekers register and apply directly through the app. You gain immediate access to a dashboard where you can view the complete, detailed profiles of every registered candidate.",
       images: "/step/step02.jpg",
     },
+    // {
+    //   step: "STEP 03",
+    //   title: "AI-Powered Matching",
+    //   subtitle: "Smart Selection",
+    //   desc: "No more manual sorting. Our built-in AI automatically screens all applicants and selects the most qualified candidates that perfectly match your specific job categories.",
+    //   images: "/step/step03.png",
+    // },
     {
       step: "STEP 03",
-      title: "AI-Powered Matching",
-      subtitle: "Smart Selection",
-      desc: "No more manual sorting. Our built-in AI automatically screens all applicants and selects the most qualified candidates that perfectly match your specific job categories.",
-      images: "/step/step03.png",
-    },
-    {
-      step: "STEP 04",
       title: "Digital Contracting",
       subtitle: "Digital Onboarding",
       desc: "Once the candidate is selected and completed the interview, they will receive their job offers on the app. They can securely review and sign their employment contracts digitally.",
       images: "/step/step04.jfif",
     },
     {
-      step: "STEP 05",
+      step: "STEP 04",
       title: "App-Based Attendance",
       subtitle: "On-Site Operations",
       desc: "During the event, workers use the mobile app to clock in and out. The app validates their presence on-site, ensuring strict, real-time attendance tracking for your operations.",
       images: "/step/step05.jpg",
     },
     {
-      step: "STEP 06",
+      step: "STEP 05",
       title: "Payroll & Invoicing",
       subtitle: "Automated Settlement",
       desc: "Attendance data automatically calculates worker payroll, generating instant digital payslips. Simultaneously, the system sends an automated invoice and a complete performance report directly to you.",
@@ -66,7 +66,34 @@ export const HowItWorks = () => {
       <div className="pointer-events-none absolute -left-20 -top-20 h-80 w-80 rounded-full bg-sky-200 blur-[120px]" />
       <div className="pointer-events-none absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-sky-200 blur-[120px]" />
 
-      {/* Header Halaman */}
+      {/* Top Navigation */}
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="relative z-10 mb-8 flex w-full items-center justify-between lg:mb-16 xl:mb-12"
+      >
+        {/* Tombol Kembali - kiri atas */}
+        <button
+          onClick={() => navigate(-1)}
+          className="hover:bg-primary border-primary group flex cursor-pointer items-center gap-2 rounded-full border bg-white px-4 py-2 shadow-lg transition-all hover:scale-110 lg:gap-4 lg:px-8 lg:py-4 xl:gap-3 xl:px-6 xl:py-3"
+        >
+          <FaArrowLeft className="text-primary text-base group-hover:text-white lg:text-4xl xl:text-lg" />
+          <span className="text-primary text-sm font-bold uppercase group-hover:text-white lg:text-3xl xl:text-base">
+            Back
+          </span>
+        </button>
+
+        {/* Tombol Home - kanan atas */}
+        <button
+          onClick={() => navigate("/")}
+          className="bg-primary/10 text-primary hover:bg-primary flex h-10 w-10 cursor-pointer items-center justify-center rounded-full transition-all duration-300 hover:scale-110 hover:text-white lg:h-24 lg:w-24 xl:h-12 xl:w-12"
+        >
+          <FaHome className="text-lg lg:text-5xl xl:text-xl" />
+        </button>
+      </motion.div>
+
+      {/* Main Content */}
       <div className="mb-4 flex w-full justify-center lg:mb-20 xl:mb-10">
         <img
           src="/bg-casual.png"
@@ -74,7 +101,7 @@ export const HowItWorks = () => {
           className="h-auto w-[40%] object-contain lg:w-[50%] xl:w-[15%]"
         />
       </div>
-      <div className="mb-10 text-center xl:text-center lg:text-left lg:mb-20 xl:mb-16">
+      <div className="mb-10 text-center lg:mb-20 lg:text-left xl:mb-16 xl:text-center">
         <h1 className="text-primary text-2xl font-black tracking-tight lg:text-6xl xl:text-3xl">
           How Casual Work Operates
         </h1>
@@ -126,7 +153,7 @@ export const HowItWorks = () => {
       </div>
 
       {/* Navigation Bar Bawah */}
-      <div className="mt-16 flex w-full justify-center lg:mt-24 xl:mt-16">
+      {/* <div className="mt-16 flex w-full justify-center lg:mt-24 xl:mt-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -134,7 +161,6 @@ export const HowItWorks = () => {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="flex items-center gap-6 p-3 lg:gap-8 lg:p-6 xl:gap-4 xl:p-4"
         >
-          {/* Tombol Kembali */}
           <button
             onClick={() => navigate(-1)}
             className="group flex cursor-pointer items-center gap-4 rounded-full border border-slate-100 bg-white px-6 py-2 shadow-lg transition-all hover:scale-110 hover:bg-slate-50 lg:px-12 lg:py-8 xl:px-4 xl:py-4"
@@ -145,10 +171,8 @@ export const HowItWorks = () => {
             </span>
           </button>
 
-          {/* Divider vertikal tipis agar mirip desain referensi */}
           <div className="h-8 w-1 bg-slate-200 lg:h-16" />
 
-          {/* Tombol Home */}
           <button
             onClick={() => navigate("/")}
             className="bg-primary/10 text-primary hover:bg-primary flex h-12 w-12 cursor-pointer items-center justify-center rounded-full transition-all duration-300 hover:scale-110 hover:text-white lg:h-24 lg:w-24 xl:h-14 xl:w-14"
@@ -156,7 +180,7 @@ export const HowItWorks = () => {
             <FaHome className="text-xl lg:text-5xl xl:text-2xl" />
           </button>
         </motion.div>
-      </div>
+      </div> */}
     </div>
   );
 };

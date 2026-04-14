@@ -21,13 +21,13 @@ export const WhatIs = () => {
       icon: <AiOutlineGlobal />,
       bgIcon: "bg-slate-200",
     },
-    {
-      title: "AI-Powered Matching",
-      description:
-        "Automatically selects the most matching candidates tailored perfectly to your specific manpower needs.",
-      icon: <FaRobot />,
-      bgIcon: "bg-slate-200",
-    },
+    // {
+    //   title: "AI-Powered Matching",
+    //   description:
+    //     "Automatically selects the most matching candidates tailored perfectly to your specific manpower needs.",
+    //   icon: <FaRobot />,
+    //   bgIcon: "bg-slate-200",
+    // },
     {
       title: "100% Paperless Operation",
       description:
@@ -59,12 +59,39 @@ export const WhatIs = () => {
   ];
 
   return (
-    <div className="relative flex min-h-screen flex-col overflow-hidden bg-white px-6 py-8 font-sans lg:px-20 lg:py-16">
+    <div className="relative flex min-h-screen flex-col overflow-hidden bg-white px-6 py-8 font-sans lg:px-10 lg:py-16">
       {/* Background Decor */}
       <div className="pointer-events-none absolute -left-20 -top-20 h-80 w-80 rounded-full bg-sky-200 blur-[120px]" />
       <div className="pointer-events-none absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-sky-200 blur-[120px]" />
 
-      {/* Logo */}
+      {/* Top Navigation */}
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="relative z-10 mb-8 flex w-full items-center justify-between lg:mb-16 xl:mb-12"
+      >
+        {/* Tombol Kembali - kiri atas */}
+        <button
+          onClick={() => navigate(-1)}
+          className="hover:bg-primary group flex cursor-pointer items-center gap-2 rounded-full border border-primary bg-white px-4 py-2 shadow-lg transition-all hover:scale-110 lg:gap-4 lg:px-8 lg:py-4 xl:gap-3 xl:px-6 xl:py-3"
+        >
+          <FaArrowLeft className="text-primary text-base group-hover:text-white lg:text-4xl xl:text-lg" />
+          <span className="text-primary text-sm font-bold uppercase group-hover:text-white lg:text-3xl xl:text-base">
+            Back
+          </span>
+        </button>
+
+        {/* Tombol Home - kanan atas */}
+        <button
+          onClick={() => navigate("/")}
+          className="bg-primary/10 text-primary hover:bg-primary flex h-10 w-10 cursor-pointer items-center justify-center rounded-full transition-all duration-300 hover:scale-110 hover:text-white lg:h-24 lg:w-24 xl:h-12 xl:w-12"
+        >
+          <FaHome className="text-lg lg:text-5xl xl:text-xl" />
+        </button>
+      </motion.div>
+
+      {/* Main Content */}
       <div className="mb-12 flex w-full justify-center lg:mb-16 xl:mb-20">
         <img
           src="/bg-casual.png"
@@ -86,7 +113,7 @@ export const WhatIs = () => {
               Your End-to-End Daily Workforce{" "}
               <span className="text-sky-400">Solution.</span>
             </h1>
-            <p className="mx-auto max-w-4xl text-base font-semibold leading-relaxed text-slate-500 lg:mx-0 lg:text-4xl xl:text-lg">
+            <p className="mx-auto max-w-5xl text-justify text-base font-semibold leading-relaxed text-slate-500 lg:mx-0 lg:text-4xl xl:text-lg">
               A smart, cloud-based platform designed to{" "}
               <span className="text-primary font-extrabold">
                 bridge the gap
@@ -102,7 +129,7 @@ export const WhatIs = () => {
           </span>
 
           {/* Core Pillar Cards */}
-          <section className="space-y-4">
+          <section className="space-y-8">
             {corePillar.map((item, index) => (
               <motion.div
                 key={index}
@@ -113,7 +140,7 @@ export const WhatIs = () => {
                   duration: 0.4,
                   ease: "easeOut",
                 }}
-                className="flex items-center gap-4 rounded-2xl border border-slate-100 bg-white p-4 shadow-lg"
+                className="flex items-center gap-6 rounded-2xl border border-slate-300 bg-white px-6 py-4 shadow-xl"
               >
                 <div
                   className={`flex h-10 w-10 shrink-0 items-center justify-center self-center rounded-xl lg:h-20 lg:w-20 xl:h-12 xl:w-12 ${item.bgIcon}`}
@@ -133,36 +160,6 @@ export const WhatIs = () => {
               </motion.div>
             ))}
           </section>
-        </motion.div>
-      </div>
-
-      {/* Bottom Navigation */}
-      <div className="mt-16 flex w-full justify-center lg:mt-24 xl:mt-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          className="flex items-center gap-6 p-3 lg:gap-8 lg:p-6 xl:gap-4 xl:p-4"
-        >
-          <button
-            onClick={() => navigate(-1)}
-            className="group flex cursor-pointer items-center gap-4 rounded-full border border-slate-100 bg-white px-6 py-2 shadow-lg transition-all hover:scale-110 hover:bg-slate-50 lg:px-12 lg:py-8 xl:px-4 xl:py-4"
-          >
-            <FaArrowLeft className="group-hover:text-primary text-lg text-slate-500 lg:text-4xl xl:text-xl" />
-            <span className="group-hover:text-primary text-sm font-bold uppercase text-slate-500 lg:text-2xl xl:text-base">
-              Kembali
-            </span>
-          </button>
-
-          <div className="h-8 w-1 bg-slate-200 lg:h-16" />
-
-          <button
-            onClick={() => navigate("/")}
-            className="bg-primary/10 text-primary hover:bg-primary flex h-12 w-12 cursor-pointer items-center justify-center rounded-full transition-all duration-300 hover:scale-110 hover:text-white lg:h-24 lg:w-24 xl:h-14 xl:w-14"
-          >
-            <FaHome className="text-xl lg:text-5xl xl:text-2xl" />
-          </button>
         </motion.div>
       </div>
     </div>
