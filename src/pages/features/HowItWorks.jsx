@@ -56,9 +56,9 @@ export const HowItWorks = () => {
     },
     {
       step: "STEP 05",
-      title: "Payroll & Invoicing",
-      subtitle: "Automated Settlement",
-      desc: "Attendance data automatically calculates worker payroll, generating instant digital payslips. Simultaneously, the system sends an automated invoice and a complete performance report directly to you.",
+      title: "Payroll",
+      subtitle: "Income Tracking",
+      desc: "Take control of your financial visibility. With Income Tracking, attendance data is automatically synchronised with payroll calculations, and instant invoices and performance reports are sent directly to your dashboard.",
       images: "/step/step06.jpg",
     },
   ];
