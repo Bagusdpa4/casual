@@ -16,7 +16,7 @@ export const IdleOverlay = () => {
     // Set timer ke 2 menit idle
     timeoutRef.current = setTimeout(() => {
       setIsIdle(true);
-    }, 5000);
+    }, 120000);
   };
 
   const handleExitIdle = () => {
@@ -62,7 +62,9 @@ export const IdleOverlay = () => {
             onLoadStart={() => console.log("⏳ Video: Start loading...")}
             onCanPlay={() => console.log("✅ Video: Ready to play (buffered).")}
             onPlay={() => console.log("▶️ Video: Attempting to play...")}
-            onPlaying={() => console.log("🎬 Video: Currently playing (Running).")}
+            onPlaying={() =>
+              console.log("🎬 Video: Currently playing (Running).")
+            }
             onWaiting={() => console.warn("⚠️ Video: Buffering/Waiting...")}
             onError={(e) => console.error("❌ Video Error:", e)}
             className="absolute inset-0 h-full w-full object-cover opacity-80"
