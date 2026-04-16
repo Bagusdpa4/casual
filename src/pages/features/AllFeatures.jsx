@@ -202,7 +202,7 @@ export const AllFeatures = () => {
                     </h2>
 
                     {/* Subtitle */}
-                    <p className="text-xl font-bold leading-tight text-[#2563EB] lg:text-5xl xl:text-2xl">
+                    <p className="text-xl font-semibold leading-tight text-[#2563EB] lg:text-5xl xl:text-2xl">
                       {content.subtitle}
                     </p>
 
@@ -210,7 +210,7 @@ export const AllFeatures = () => {
                     <div className="h-1 w-40 rounded-full bg-black" />
 
                     {/* Description */}
-                    <p className="text-sm font-semibold leading-relaxed text-slate-500 lg:text-4xl xl:text-base">
+                    <p className="text-justify text-sm font-medium leading-relaxed text-slate-500 lg:text-4xl xl:text-base">
                       {content.desc}
                     </p>
 

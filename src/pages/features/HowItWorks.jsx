@@ -223,7 +223,7 @@ export const HowItWorks = () => {
                       {item.subtitle}
                     </p>
                   </div>
-                  <p className="max-w-md text-sm font-medium leading-relaxed text-black lg:text-4xl xl:text-xl">
+                  <p className="max-w-md text-justify text-sm font-medium leading-relaxed text-black lg:text-4xl xl:text-xl">
                     {item.desc}
                   </p>
                 </div>
