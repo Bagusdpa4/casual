@@ -16,7 +16,7 @@ export const IdleOverlay = () => {
     // Set timer ke 2 menit idle
     timeoutRef.current = setTimeout(() => {
       setIsIdle(true);
-    }, 120000);
+    }, 5000);
   };
 
   const handleExitIdle = () => {
