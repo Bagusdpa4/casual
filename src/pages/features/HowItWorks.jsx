@@ -164,6 +164,9 @@ export const HowItWorks = () => {
                           initial={{ opacity: 0, x: 20 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: -20 }}
+                          onClick={() =>
+                            handleLandscapeSwap(index, item.images.length)
+                          }
                           transition={{ duration: 0.4, ease: "easeInOut" }}
                           className="h-auto w-full object-cover object-top"
                         />
